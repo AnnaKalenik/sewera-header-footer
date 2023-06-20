@@ -1,0 +1,121 @@
+@media (max-width: 1200px) {
+    .popular-services {
+        &__title-2 {
+            font-size: 26px;
+            line-height: 31px;
+        }
+
+        &__list {
+            gap: 24px;
+        }
+
+        &__slider {
+            & .swiper-slide, .popular-services__image {
+                height: 200px;
+            }
+    
+            &_big {
+                & .swiper-slide, .popular-services__image {
+                    height: 280px;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .popular-services {
+        &__title-2 {
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        &__list {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__item {
+            flex: 0;
+        }
+
+        &__slider {
+            & .swiper-slide, .popular-services__image {
+                height: 280px;
+            }
+    
+            &_big {
+                & .swiper-slide, .popular-services__image {
+                    height: 280px;
+                }
+            }
+        }
+
+        &__info {  
+            padding: 10px 20px 20px;
+        }
+
+        &__description,
+        &__link,
+        &__btn {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .popular-services {
+        &__title-2 {
+            font-size: 22px;
+            line-height: 125%;
+            padding: 0 0 20px !important;
+        }
+
+        &__list {
+            gap: 20px;
+        }
+
+        &__slider {
+            & .swiper-slide, .popular-services__image {
+                height: 200px;
+            }
+    
+            &_big {
+                & .swiper-slide, .popular-services__image {
+                    height: 200px;
+                }
+            }
+        }
+
+        &__info {  
+            padding: 10px 15px 15px;
+        }
+
+        &__title {
+            font-size: 16px;
+            line-height: 120%;
+        }
+
+        &__description {
+            line-height: 135%;
+        }
+
+        &__link {
+            line-height: 125%;
+        }
+
+        &__row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        &__price {
+            font-size: 20px;
+        }
+    }
+}

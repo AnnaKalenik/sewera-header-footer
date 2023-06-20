@@ -1,0 +1,134 @@
+@media (max-width: 1200px) {
+    .table-block {
+        &__title-2 {
+            font-size: 26px;
+            line-height: 31px;
+        }
+
+        & ul {
+            font-size: 18px;
+        }
+
+        &__info {
+            font-size: 18px;
+
+            &::before {
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .table-block {
+        &__title-2 {
+            padding: 0 0 20px !important;
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        &__date {
+            font-size: 14px;
+            line-height: 140%;
+        }
+
+        & ul {
+            font-size: 16px;
+        }
+
+        &__top {
+            font-size: 14px !important;
+        }
+
+        &__body-content {
+            & li {
+                font-size: 14px !important;
+            }
+
+            & li:last-child {
+                font-weight: 600 !important;
+            }
+        }
+
+        &__info {
+            font-size: 16px;
+            
+            &::before {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .table-block {
+        &__title-2 {
+            font-size: 22px;
+            line-height: 125%;
+            padding: 0 0 21px !important;
+        }
+
+        &__date {
+            display: flex;
+            justify-content: stretch;
+            border-radius: 6px;
+
+            &::before {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        &__top {
+            display: none !important;
+        }
+
+        & ul {  
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 5px;
+        }
+
+        & li {
+            align-items: flex-start;
+        }
+    
+        & li:first-child {
+            justify-content: flex-start;
+            padding: 9px 10px 0;
+        }
+    
+        & li:last-child {
+            justify-content: flex-start;
+            text-align: left;
+            padding: 0px 10px 7px;
+        }
+
+        &__head-content {
+            & li:first-child {
+                justify-content: space-between;
+            }
+        }
+
+        &__body-content {  
+            & li:first-child {
+                padding: 10px 10px 0;
+            }
+
+            & li:last-child {
+                padding: 0px 10px 10px;
+            }
+        }
+
+        &__info {
+            display: grid;
+            grid-template-columns: 16px 1fr;
+            grid-template-rows: auto;
+            align-items: start;
+            gap: 10px;
+            border-radius: 6px;
+            padding: 10px;
+        }
+    }
+}
