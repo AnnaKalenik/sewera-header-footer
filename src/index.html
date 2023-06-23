@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<!--[if IE 8 ]><html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>" class="ie8"><![endif]-->
-<!--[if IE 9 ]><html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>" class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="<?php echo $lang; ?>">
-<!--<![endif]-->
 
 <head>
 	<meta charset="UTF-8" />
@@ -25,10 +20,13 @@
 	<link rel="preload" href="./fonts/FiraSansLight.woff" as="font" type="font/woff" crossorigin>
 
 	<link rel="stylesheet" media="all" href="./css/normalize.css" type="text/css" />
-	<link rel="stylesheet" media="all" href="./css/body.css?ver=3" type="text/css" />
+	<link rel="stylesheet" media="all" href="./css/body.css" type="text/css" />
+	<!-- Стили шапки и футера -->
+	<link rel="stylesheet" media="all" href="./css/style.css" type="text/css" />
+	<!--  -->
 	<link rel="stylesheet" media="all" href="./css/main_block.css" type="text/css" />
-	<link rel="stylesheet" media="all" href="./css/area-catalog.css?4" type="text/css" />
-	<link rel="stylesheet" media="all" href="./css/area-brends.css?1" type="text/css" />
+	<link rel="stylesheet" media="all" href="./css/area-catalog.css" type="text/css" />
+	<link rel="stylesheet" media="all" href="./css/area-brends.css" type="text/css" />
 	<link rel="stylesheet" media="all" href="./css/area-quiz-uni.css" type="text/css" />
 	<link rel="stylesheet" media="all" href="./css/swiper-bundle.min.css" type="text/css" />
 
@@ -160,6 +158,7 @@
 
 	<div class="page-width">
 
+<!-- Панель поиска (будет переделываться, она не нужна)-->
 		<!-- <div class="wind-search">
 			<div class="wind-head">
 				<div class="page-bl">
@@ -212,7 +211,8 @@
 			</div>
 		</div> -->
 
-		<div class="header-wrap">
+<!-- Старый хедер -->
+		<!-- <div class="header-wrap">
 			<header class="site-header">
 				<div class="head-sub">
 					<div class="page-bl">
@@ -1284,11 +1284,412 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
+
+<!-- Новый хедер -->
+		<header class="header-new">
+			<div class="page-bl">
+				<div class="header-new__wrap">
+
+					<div class="header-new__logo-wrap">
+						<a class="header-new__logo-link" href="https://sewera.ru/">
+							<img class="header-new__logo-img" loading="lazy" width="186" height="39" src="https://sewera.ru/image/catalog/Icons/Logo Sewera correct.svg" alt="Sewera">
+						</a>
+					</div>
+
+					<nav class="header-new__nav nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<button class="nav__button button">
+									<!--  класс nav__burger_active добавляет красный индикатор к бургеру-->
+									<span class="nav__burger nav__burger_active burger">
+										<span class="burger__line burger__line_line1"></span>
+										<span class="burger__line burger__line_line2"></span>
+										<span class="burger__line burger__line_line3"></span>	
+									</span>
+									Каталог
+								</button>
+								<div class="nav__window catalog">
+									<div class="catalog__wrap">
+										<ul class="catalog__list">
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/septiki/">Септик</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/otoplenie/">Отопление</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/kolodec/">Колодец</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/skvazhina-na-vodu/">Скважина на воду</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/sistema-ochistki-vodi/">Система очистки воды</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/kupeli/">Купели</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/sewera-servis/">Sewera Сервис</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/vodosnabzhenie/">Водоснабжение</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/pogreba/">Погреба</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/blagoustrojstvo/">Благоустройство</a></li>
+											<li class="catalog__item"><a class="catalog__link" href="https://sewera.ru/videonabljudenie/">Видеонаблюдение</a></li>
+										</ul>
+									<!-- Класс wish_active добавляет красный индикатор к Избранному-->
+										<div class="catalog__wish wish wish_active" id="wishlist-nav" data-count-wishlist="0">
+											<a class="wish__link" href="https://sewera.ru/wishlist/">Избранное</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- 
+								Благодаря классу nav__item_relative подменю sub-menu
+								позиционируется относительно пункта меню nav__item и добавляется стрелка.
+
+								Если к остальным пунктам необходимо добавить подменю, надо установить этот класс
+								и вставить  
+								<div class="nav__window sub-menu">
+									<div class="sub-menu__wrap">
+										<ul class="sub-menu__list">
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/o-nas-sewera/">О нас</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/reviews/">Отзывы</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/jobs/">Наши работы</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/our-video/">Наши видео</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/dostavka/">Доставка</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/oplata/">Оплата</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/garantija/">Гарантии</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/contacts/">Контакты</a></li>
+										</ul>
+									</div>
+								</div>
+							-->
+							<li class="nav__item nav__item_relative">
+								<a class="nav__link" href="javascript:void(0)">О компании</a>
+								<div class="nav__window sub-menu">
+									<div class="sub-menu__wrap">
+										<ul class="sub-menu__list">
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/o-nas-sewera/">О нас</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/reviews/">Отзывы</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/jobs/">Наши работы</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/our-video/">Наши видео</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/dostavka/">Доставка</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/oplata/">Оплата</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/garantija/">Гарантии</a></li>
+											<li class="sub-menu__item"><a class="sub-menu__link" href="/contacts/">Контакты</a></li>
+										</ul>
+										<div class="sub-menu__blog blog">
+											<div class="blog__wrap log__wrap_positioned">
+												<span class="blog__title">Sewera Daily</span>
+												<p class="blog__description">Наш блог c полезным контентом для тех, кто живет за городом</p>
+												<div class="blog__links">
+													<a class="blog__link" href="https://t.me/seweradaily" target="_blank">
+														<img loading="lazy" width="34" height="34" src="../images/blog-telegram.svg" alt="Иконка Telegram" class="blog__icon">
+													</a>
+													<a class="blog__link" href="https://t.me/seweradaily" target="_blank">
+														<img loading="lazy" width="34" height="34" src="../images/blog-vk.svg" alt="Иконка Вконтакте" class="blog__icon">
+													</a>
+													<a class="blog__link" href="https://t.me/seweradaily" target="_blank">
+														<img loading="lazy" width="34" height="34" src="../images/blog-dzen.svg" alt="Иконка Дзен" class="blog__icon">
+													</a>
+												</div>	
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="/contacts/">Контакты</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="/promotion/">Пригласи друга</a>
+							</li>
+						</ul>
+					</nav>
+
+					<ul class="header-new__list-links">
+						<li class="header-new__item">
+							<a class="header-new__link" href="https://t.me/seweraru" target="_blank">
+								<img class="header-new__icon" loading="lazy" width="20" height="20" src="../images/header-new-telegram.svg" alt="Иконка Telegram">
+							</a>	
+						</li>
+						<li class="header-new__item">
+							<a class="header-new__link" href="https://wa.me/79263345863" target="_blank">
+								<img class="header-new__icon" loading="lazy" width="20" height="20" src="../images/header-new-whatsapp.svg" alt="Иконка WhatsApp">
+							</a>	
+						</li>
+						<li class="header-new__item header-new__item_hidden">
+							<button class="header-new__button button w-btn" 
+									href="#w-popup-01" 
+									onclick="ym(38077235,'reachGoal','header-btn-click'); return true;" 
+									data-onsubmit="ym(38077235,'reachGoal','header-btn-submit');ym(38077235,'reachGoal','submitted');return true;">
+									Заказать звонок
+							</button>
+						</li>
+						<li class="header-new__item">
+							<a class="header-new__link phoneroi" href="tel:+74957400558">
+								<span class="header-new__num">+7 495 740–05–58</span>
+								<img class="header-new__icon header-new__icon_phone" loading="lazy" width="20" height="20" src="../images/header-new-phone.svg" alt="Иконка телефона">
+							</a>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</header>
 
 		<div class="site-content">
 			<!--	контент-->
-			
+
+			<div class="section">
+				<div class="page-bl">
+				
+					<div class="popular-services__block">
+						<h2 class="h-2 popular-services__title-2">Популярные услуги</h2>
+					
+						<div class="popular-services__list">
+							<div class="popular-services__item">
+							
+								<div class="popular-services__wrapper">
+									<!-- Если в блоке будет 2 карточки, тогда добавляем для слайдера модификатор big  
+										<div class="popular-services__slider popular-services__slider_big swiper">
+									-->
+									<div class="popular-services__slider swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200000">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200000">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200000">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+										</div>
+										<div class="popular-services__arrow popular-services__prev" role="button" aria-label="Previous slide">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z" stroke="#E4E9EC" stroke-width="2"/>
+												<path d="M12.8988 14.8981L9.81326 11.8125L12.8988 8.72694" stroke="#E4E9EC" stroke-width="2"/>
+											</svg>
+										</div>
+										<div class="popular-services__arrow popular-services__next" role="button" aria-label="Next slide">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12Z" stroke="#E4E9EC" stroke-width="2"/>
+												<path d="M11.1012 14.8981L14.1867 11.8125L11.1012 8.72694" stroke="#E4E9EC" stroke-width="2"/>
+											</svg>
+										</div>
+									</div>
+								</div>	
+							
+								<div class="popular-services__info">
+									<div class="popular-services__info-text">
+										<h3 class="popular-services__title">Снос кирпичного или деревянного дома площадью 65 м</h3>
+										<p class="popular-services__description">
+											Аккуратная и привычная дорожка из щебня, песка и бордюрной ленты – ширина 1 м. Долговечная дорожка, которая не требует тщательного ухода – достаточно раз в год ее подравнивать
+										</p>
+										<a class="popular-services__link" href="#">Подробнее</a>
+									</div>
+									<div class="popular-services__row">
+										<div class="popular-services__price">125 500 руб./м2</div>
+										<button type="button" class="popular-services__btn">
+											Заказать
+											<svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 6H10M10 6L5.5 10.5M10 6L5.5 1.5" stroke="#009CD9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+							
+							</div>
+							<div class="popular-services__item">
+							
+								<div class="popular-services__wrapper">
+									<!-- Если в блоке будет 2 карточки, тогда добавляем для слайдера модификатор big  
+										<div class="popular-services__slider popular-services__slider_big swiper">
+									-->
+									<div class="popular-services__slider swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200001">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200001">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200001">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+										</div>
+										<div class="popular-services__arrow popular-services__prev" role="button" aria-label="Previous slide">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z" stroke="#E4E9EC" stroke-width="2"/>
+												<path d="M12.8988 14.8981L9.81326 11.8125L12.8988 8.72694" stroke="#E4E9EC" stroke-width="2"/>
+											</svg>
+										</div>
+										<div class="popular-services__arrow popular-services__next" role="button" aria-label="Next slide">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12Z" stroke="#E4E9EC" stroke-width="2"/>
+												<path d="M11.1012 14.8981L14.1867 11.8125L11.1012 8.72694" stroke="#E4E9EC" stroke-width="2"/>
+											</svg>
+										</div>
+									</div>
+								</div>	
+							
+								<div class="popular-services__info">
+									<div class="popular-services__info-text">
+										<h3 class="popular-services__title">Снос кирпичного или деревянного дома площадью 65 м</h3>
+										<p class="popular-services__description">
+											Аккуратная и привычная дорожка из щебня, песка и бордюрной ленты – ширина 1 м. Долговечная дорожка, которая не требует тщательного ухода – достаточно раз в год ее подравнивать
+										</p>
+										<a class="popular-services__link" href="#">Подробнее</a>
+									</div>
+									<div class="popular-services__row">
+										<div class="popular-services__price">125 500 руб./м2</div>
+										<button type="button" class="popular-services__btn">
+											Заказать
+											<svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 6H10M10 6L5.5 10.5M10 6L5.5 1.5" stroke="#009CD9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+							
+							</div>
+							<div class="popular-services__item">
+							
+								<div class="popular-services__wrapper">
+									<div class="popular-services__slider swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200002">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200002">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+											<div class="swiper-slide">
+												<a href="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-1000.webp"
+													data-fancybox="images-200002">
+													<picture class="popular-services__image">
+														<source
+															srcset="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-750.webp"
+															media="(min-width: 500px)">
+														<img class="popular-services__image"
+															src="https://sewera.ru/image/cache/catalog/image/cache/catalog/blagoustroytvo/gorizont-kartochki/chistka-ychastka/gor-chistka11-max-500.webp"
+															alt="Снос кирпичного или деревянного дома площадью 65 м">
+													</picture>
+												</a>
+											</div>
+										</div>
+										<div class="popular-services__arrow popular-services__prev" role="button" aria-label="Previous slide">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z" stroke="#E4E9EC" stroke-width="2"/>
+												<path d="M12.8988 14.8981L9.81326 11.8125L12.8988 8.72694" stroke="#E4E9EC" stroke-width="2"/>
+											</svg>
+										</div>
+										<div class="popular-services__arrow popular-services__next" role="button" aria-label="Next slide">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12Z" stroke="#E4E9EC" stroke-width="2"/>
+												<path d="M11.1012 14.8981L14.1867 11.8125L11.1012 8.72694" stroke="#E4E9EC" stroke-width="2"/>
+											</svg>
+										</div>
+										<div class="popular-services__dots"></div>
+									</div>
+								</div>	
+							
+								<div class="popular-services__info">
+									<div class="popular-services__info-text">
+										<h3 class="popular-services__title">Снос кирпичного или деревянного дома площадью 65 м</h3>
+										<p class="popular-services__description">
+											Аккуратная и привычная дорожка из щебня, песка и бордюрной ленты – ширина 1 м. Долговечная дорожка, которая не требует тщательного ухода – достаточно раз в год ее подравнивать
+										</p>
+										<a class="popular-services__link" href="#">Подробнее</a>
+									</div>
+									<div class="popular-services__row">
+										<div class="popular-services__price">125 500 руб./м2</div>
+										<button type="button" class="popular-services__btn">
+											Заказать
+											<svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 6H10M10 6L5.5 10.5M10 6L5.5 1.5" stroke="#009CD9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+							
+							</div>
+						</div>
+
+					</div>
+				
+				</div>
+			</div>
+
 		</div> <!-- site-content -->
 
 		<footer class="site-footer" itemscope itemtype="http://schema.org/Organization">
@@ -1680,6 +2081,7 @@
 	<script src="./javascript/tags-panel.js"></script>
 
 	<script src="./js/wishlist.js"></script>
+	<script src="./js/header-new.js"></script>
 	<script src="./js/app.js"></script>
 
 

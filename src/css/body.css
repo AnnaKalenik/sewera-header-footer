@@ -243,7 +243,8 @@ body.show-w-popup .js-btn-bl {
     max-width: 1264px;
     width: auto;
     text-align: left;
-    padding: 0 30px;
+    /* padding: 0 30px; */
+    padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -5631,7 +5632,7 @@ body.show-w-popup .w-popup.show::after {
 
 @media screen and (max-width: 720px) {
     .page-width {
-        padding-top: 49px;
+        /* padding-top: 49px; */
         box-sizing: border-box
     }
 
@@ -5809,9 +5810,9 @@ body.show-w-popup .w-popup.show::after {
     margin: 0 0 0 42px
 }
 
-.page-width {
+/* .page-width {
     padding-top: 153px
-}
+} */
 
 .header-wrap {
     position: absolute;
@@ -5848,9 +5849,9 @@ body.show-w-popup .w-popup.show::after {
 }
 
 @media screen and (max-width: 720px) {
-    .page-width {
+    /* .page-width {
         padding-top: 49px
-    }
+    } */
 
     body.show-category .page-width {
         padding-top: 0 !important
