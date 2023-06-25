@@ -1,4 +1,6 @@
 .header-new {
+    position: relative;
+    z-index: 999;
     background-color: #fff;
 
     &__wrap {
@@ -11,16 +13,10 @@
         align-items: center;
         gap: 8px;
     }
-
-    &__logo-wrap,
-    &__logo-link {
+   
+    &__logo {
         width: 186px;
         height: 39px;
-    }
-
-    &__logo-img {
-        width: 186px;
-        height: auto;
     }
 
     &__list-links {
@@ -61,6 +57,16 @@
         &_phone {
             display: none;
         }
+    }
+}
+
+.logo {
+    width: 186px;
+    height: 39px;
+
+    &__img {
+        width: 100% !important;
+        height: auto !important;
     }
 }
 
@@ -139,7 +145,7 @@
 
         &_active .nav__link::after,
         &_hover .nav__link::after {
-            transform: rotate(180deg);
+            transform: rotate(-180deg);
         }
     }
 

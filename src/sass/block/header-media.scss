@@ -4,16 +4,11 @@
             min-height: 100px;
         }
 
-        &__logo-wrap,
-        &__logo-link {
+        &__logo {
             width: 140px;
             height: 30px;
         }
     
-        &__logo-img {
-            width: 140px;
-        }
-
         &__list-links {
             gap: 17px;
         }
@@ -120,19 +115,22 @@
 }
 
 @media (max-width: 1023px) {
-    .header-new {
+    .header-wrapper {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        overflow-x: hidden;
+    }
+    
+    .header-new {       
         &__wrap {
             min-height: 60px;
         }
 
-        &__logo-wrap,
-        &__logo-link {
+        &__logo {
             width: 113px;
             height: 24px;
-        }
-
-        &__logo-img {
-            width: 113px;
         }
 
         &__nav {
