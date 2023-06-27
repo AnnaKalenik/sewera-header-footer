@@ -1,6 +1,12 @@
+.common-home {
+    position: relative !important;
+}
+
+.common-home.mob-menu-open {
+    overflow: hidden;
+}
+
 .header-new {
-    position: relative;
-    z-index: 999;
     background-color: #fff;
 
     &__wrap {
@@ -259,7 +265,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-auto-flow: column;
+        grid-auto-flow: row;
         gap: 2px 33px;
     }
 
@@ -434,6 +440,10 @@
         font-weight: 600;
         line-height: 130%;
         color: #102938;
+
+        &_footer {
+            line-height: 150%;
+        }
     }
 
     &__description {

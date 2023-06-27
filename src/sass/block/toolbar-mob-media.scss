@@ -3,6 +3,8 @@
         position: fixed;
         bottom: 0;
         left: 0;
+        width: 100%;
+
         right: 0;
         height: 60px;
         background: #fff;
@@ -25,11 +27,9 @@
             gap: 2px;
 
             position: relative;
-            overflow: hidden;
             cursor: pointer;
             transition: color 0.3s ease;
 
-            &:hover,
             &_active {
                 background-color: #F8F8F8;
             }
@@ -94,11 +94,5 @@
 
     .__jivoMobileButton {
         display: none !important
-    }
-}
-
-@media (max-width: 767px) {
-    .toolbar-mob {
-        height: 48px;
     }
 }

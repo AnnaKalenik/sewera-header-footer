@@ -1,180 +1,5 @@
 .mob-menu {
     display: none;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -430px;
-    overflow-y: auto;
-    z-index: 1000;
-
-    max-height: calc(100vh - 60px);
-    height: 100%;
-    width: 430px;
-    background: #ffffff;
-
-    transition: right 0.3s ease;
-
-    &_open {
-        right: 0px;
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        gap: 20px;
-        padding: 0 20px 20px;
-    }
-
-    &__wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        padding: 18px 0;
-    }
-
-    &__logo {
-        width: 113px;
-        height: 24px;
-    }
-
-    &__btn-close {
-    }
-
-    &__accordion {
-        padding-bottom: 5px;
-    }
-
-    &__phone {
-        font-family: 'Fira Sans';
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 120%;
-        letter-spacing: 0.36px;
-        text-align: left;
-        color: #102938;
-
-        border-top: 1px solid #E8EAEC;
-        padding-top: 20px;
-        cursor: pointer;
-    }
-
-    &__messengers {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-    }
-
-    &__call-back {
-        padding: 10px;
-    }
-
-    &__blog {
-        position: static;
-        padding: 10px;
-        width: auto;
-
-        & .blog__wrap {
-            gap: 5px;
-        }
-
-        & .blog__title {
-            font-weight: 700;
-        }
-
-        & .blog__links {
-            gap: 10px;
-            margin-top: 10px;
-        }
-    }
-
-    &__info {
-        padding: 10px;
-    }
-}
-
-.accordion {
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        gap: 25px;
-    }
-
-    &__item {
-    }
-
-    &__name {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-
-        color: #102938;
-        font-size: 16px;
-        font-family: 'Fira Sans';
-        font-weight: 600;
-        line-height: 120%;
-
-        &_arrow {
-            position: relative;
-            cursor: pointer;
-    
-            &::after {
-                content: '';
-                width: 20px;
-                height: 20px;
-                background: url('../images/mob-nav-accordion-arrow.svg') no-repeat center / contain;
-                transition: transform 0.2s ease;
-            }
-        }
-    }
-
-    &__window-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        gap: 10px;
-
-        padding-top: 10px;
-    }
-
-    &__window-item {
-        border-radius: 6px;
-        background: #F8F8F8;
-        padding: 10px;
-    }
-
-    &__window-link {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 3px;
-
-        color: #102938;
-        font-size: 14px;
-        font-family: 'Fira Sans';
-        font-weight: 500;
-        line-height: 115%;
-        cursor: pointer;
-
-        &::after {
-            content: '';
-            width: 12px;
-            height: 12px;
-            background: url('../images/header-new-link-arrow.svg') no-repeat center / contain;
-        }
-
-        &:hover {
-            color: #102938 !important;
-        }
-    }
 }
 
 .messengers {
@@ -186,7 +11,6 @@
         align-items: center;
         gap: 10px;
 
-        padding: 10px 15px;
         cursor: pointer;
     }
 
@@ -197,7 +21,7 @@
 
     &__name {
         font-family: 'Fira Sans';
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 125%;
         text-align: left;
@@ -205,14 +29,9 @@
     }
 }
 
-.block {
-    border-radius: 6px;
-    background: #F8F8F8;
-}
-
 .call-back {
-    max-height: 88px;
-    height: 100%;
+    height: 88px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
@@ -232,7 +51,7 @@
 
     &__title {
         font-family: 'Fira Sans';
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 125%;
         text-align: left;
@@ -252,17 +71,12 @@
         border: none !important;
         padding: 10.5px 5px !important;
 
-        color: #102938;
-        font-size: 16px;
-        font-family: 'Fira Sans';
-        font-weight: 500 !important;
-        line-height: 115% !important;
-
         &::placeholder {
             color: #6F7F87;
             font-size: 14px;
             font-family: 'Fira Sans';
             line-height: 115%;
+            letter-spacing: 0.39px;
         }
     }
 
@@ -292,7 +106,7 @@
         color: #102938;
 
         &_sent {
-            display: block;
+            display: flex;
         }
     }
 }
@@ -305,12 +119,24 @@
 
     &__text {
         font-family: 'Fira Sans';
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 150%;
         text-align: left;
         color: #102938;
+
+        &_mob {
+            display: none;
+        }
+
+        &:hover {
+            color: #102938 !important;
+        }
     }
+}
+
+.mob-menu-cover {
+    display: none;
 }
 
 @import "mob-menu-media.scss";

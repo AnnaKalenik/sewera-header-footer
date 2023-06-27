@@ -110,6 +110,11 @@
         &__link {
             width: 30px;
             height: 30px;
+
+            &_footer {
+                width: 34px;
+                height: 34px;
+            }
         }
     }
 }
@@ -120,7 +125,6 @@
         width: 100vw;
         height: 100vh;
         display: block;
-        overflow-x: hidden;
     }
     
     .header-new {       
