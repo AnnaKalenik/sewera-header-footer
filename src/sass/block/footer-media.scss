@@ -198,12 +198,6 @@
 
 @media (max-width: 767px) {
     .footer {
-        &__phone {  
-            font-size: 18px;
-            line-height: 135%;
-            letter-spacing: 0.75px;
-        }
-
         &__wrap-blocks {
             flex-direction: column;
             justify-content: stretch;
@@ -233,9 +227,11 @@
 }
 
 @media (max-width: 429px) {
-
-}
-
-@media (max-width: 319px) {
-
+    .footer {
+        &__phone {  
+            font-size: 18px;
+            line-height: 135%;
+            letter-spacing: 0.75px;
+        }
+    }
 }
