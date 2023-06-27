@@ -96,3 +96,9 @@
         display: none !important
     }
 }
+
+@media (max-width: 767px) {
+    .toolbar-mob {
+        height: 48px;
+    }
+}
