@@ -84,6 +84,15 @@
             align-items: stretch;
             gap: 25px;
         }
+
+        &__nav-item {
+            &_wish {
+                display: flex;
+                justify-content: stretch;
+                align-items: center;    
+                gap: 5px;
+            }
+        }
     
         &__nav-name {   
             display: flex;

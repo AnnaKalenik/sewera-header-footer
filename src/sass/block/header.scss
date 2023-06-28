@@ -304,15 +304,15 @@
 
 .wish {
     width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;    
+    gap: 6px;
+    
     border-top: 1px solid #E8EAEC;
     padding-top: 20px;
 
     &_active {
-        display: flex;
-        justify-content: stretch;
-        align-items: center;    
-        gap: 6px;
-
         &::after {
             content: '';
             width: 5px;
