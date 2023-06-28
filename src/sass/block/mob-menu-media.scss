@@ -327,12 +327,9 @@
             left: 0px;
         }
 
-        &__content {
-            padding: 0 14px 20px;
-        }
-
         &__phone {
-            letter-spacing: 0.49px;
+            font-size: 18px;
+            letter-spacing: 1px;
         }
     }
 
@@ -366,9 +363,13 @@
 }
 
 @media (max-width: 429px) {
+    .mob-menu {
+        &__content {
+            padding: 0 14px 20px;
+        }
 
-}
-
-@media (max-width: 319px) {
-
+        &__phone {
+            font-size: 16px;
+        }
+    }
 }

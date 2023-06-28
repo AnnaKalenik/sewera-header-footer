@@ -91,6 +91,10 @@
             height: 24px;
         }
 
+        &__column-wrap {
+            display: none;
+        }
+
         &__address,
         &__time {
             &_mob {
@@ -143,6 +147,8 @@
         }
 
         &__nav-name {
+            font-size: 16px;
+            
             &_mob {
                 display: flex;
             }
