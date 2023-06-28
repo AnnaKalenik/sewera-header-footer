@@ -36,6 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 count = 0;
             })
         }) 
+
+        document.addEventListener('click', (e) => {
+            let navItem = e.target.closest('.nav__item');
+
+            if(navItem === null) {
+                navItems.forEach(item => item.classList.remove('nav__item_active'));
+            } else return;
+        })
     }
 
     // мобильное меню
