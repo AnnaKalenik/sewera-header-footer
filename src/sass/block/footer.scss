@@ -11,13 +11,19 @@
 
     &__wrap {
         display: grid;
-        // grid-template-columns: repeat(4, 1fr);
-        grid-template-columns: repeat(4, minmax(221px, 293.5px));
+        grid-template-columns: minmax(221px, 293.5px) minmax(462px, 617px) minmax(221px, 293.5px);
         grid-template-rows: 1fr;
         gap: 30px;
 
         border-bottom: 1px solid #E8EAEC;
         padding: 60px 0 40px;
+    }
+
+    &__column-wrap {
+        display: grid;
+        grid-template-columns: minmax(221px, 293.5px) minmax(221px, 293.5px);
+        grid-template-rows: 1fr;
+        gap: 30px;
     }
 
     &__logo {
@@ -79,39 +85,12 @@
 
     &__nav-list {
         display: grid;
-        // grid-template-columns: repeat(4, 1fr);
         grid-template-columns: minmax(221px, 293.5px) minmax(462px, 617px) minmax(221px, 293.5px);
         grid-template-rows: 1fr;
         gap: 30px;
     }
 
     &__nav-item {
-        // &_column1 {
-        //     grid-column: 1 / 2;
-        //     grid-row: 1 / 2;
-        // }
-
-        // &_column2 {
-        //     grid-column: 2 / 3;
-        //     grid-row: 1 / 2;
-        // }
-
-        // &_column3 {
-        //     grid-column: 3 / 4;
-        //     grid-row: 1 / 2;
-        // }
-
-        // &_column4 {
-        //     grid-column: 4 / 5;
-        //     grid-row: 1 / 2;
-
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: flex-start;
-        //     align-items: stretch;
-        //     gap: 30px;
-        // }
-
         &_column1 {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
@@ -120,12 +99,6 @@
         &_column2 {
             grid-column: 2 / 3;
             grid-row: 1 / 2;
-
-            // display: flex;
-            // justify-content: flex-start;
-            // align-items: stretch;
-            // gap: 30px;
-
 
             display: grid;
             grid-template-columns: minmax(221px, 293.5px) minmax(221px, 293.5px);
@@ -165,10 +138,6 @@
             display: none;
         }
     }
-
-    // &__accordion {
-    //     flex: 1 1 0;
-    // }
 
     &__window-list {
         display: flex;
