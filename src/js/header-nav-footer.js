@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // мобильное меню
 	function toggleBurger() {
-        const body = document.querySelector('.common-home');
+        const body = document.querySelector('body');
         const cover = document.querySelector('.mob-menu-cover');
         const btnsClose = document.querySelector('.mob-menu__btn-close');
 		const mobMenu = document.querySelector('.mob-menu');
